@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  <div id="container">
+  	<div>
+  		<h2>Registration</h2>
+  		{% with messages = get_flashed_messages()%}
+  		{%if messages:%}
+  		{%for message in messages:%}
+  		<p style="color:red">{{message}}</p>
+  		{% endfor%}
+  		{% endif%}
+  		{% endwith%}
+   		<form action="/register" method="post">
+   		<p><label>First Name </label><input type="text" name="first_name"></p>
+   		<p><label>Last Name </label><input type="text" name="last_name"></p>
+   		<p><label>Email </label><input type="email" name="email"></p>
+   		<p><label>User Name </label><input type="text" name="user_name"></p>
+   		<p><label>Password </label><input type="password" name="password"></p>
+   		<p><label>Confirm Password </label><input type="password" name="confirm_password"></p>
+   		<p><input type="submit" name="submit" value="Register"></p>
+   		</form>
+  	</div>
+
+  	<div>
+  		<h2>Login</h2>
+  		<form action="/login" method="post">
+  			<p><label>Email </label><input type="email" name="email"></p>
+  			<p><label>Password </label><input type="password" name="password"></p>
+  			<p><input type="submit" name="submit" value="Login"></p>
+  		</form>
+  	</div>
+  		
+   </div>
+  </body>
+</html>

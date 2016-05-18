@@ -1,0 +1,8 @@
+* {
+  font-family: monaco;
+}
+#container{
+	width: 960px;
+	margin: auto;
+	margin-top: 50px;
+}
